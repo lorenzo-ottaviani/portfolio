@@ -1,0 +1,301 @@
+ /* CSS du Portfolio de Lorenzo Ottaviani */
+
+ /* Importations de polices et backgrounds */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'EthnoFont';
+    src: url('./fonts/ethnocentric_rg.otf'); /* IE9 Compat Modes */
+}
+
+/* Définition de variables */
+
+:root {
+    --bleu-1: #96D3FF;
+    --bleu-2: #89FFF9;
+    --police-titres: Lexend Tera;
+}
+
+/* Configurations par défault */
+
+* {
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+}
+
+main {
+    margin: 25px;
+}
+
+/* En tête */
+
+header {
+    height: 100px;
+    background: linear-gradient(to bottom, var(--bleu-2), var(--bleu-1));
+    align-content: center;
+
+    nav{
+        display: flex;
+        justify-content: space-around;
+    
+        a{
+            font-size: 40px;
+            text-decoration: none;
+            font-family: var(--police-titres);
+        }
+    }   
+}
+
+/* Titre principal */
+
+h1 {
+    font-size: 90px;
+    font-family: Segoe Print;
+    text-align: center;
+}
+
+/* Titres secondaires */
+
+h2 {
+    font-size: 40px;
+    font-family: var(--police-titres);
+    text-align: center;
+}
+
+/* Section diaporama des projets simple */
+
+.projets_titre {
+    margin: 20px 0;
+}
+
+.projets_diaporama {
+    display: flex;
+    justify-content: space-around;
+}
+
+.wiggle {
+    display: flex;
+    border-radius: 20px;
+    border: solid grey;
+    padding: 20px;
+    
+    img {
+        height: 400px;
+    }
+
+}
+
+/* Section diaporama des projets avec carroussel (pour plus tard) */
+
+/* .projets_diaporama {
+    display: flex;
+    gap: 20px;
+    animation: carouselInfinite 60s linear infinite;
+}
+
+/* .album-carousel {
+    padding: 50px 0;
+    max-width: 1650px;
+    margin: 3em auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.47);
+  }
+  
+/* .album-carousel-items {
+    display: flex;
+    gap: 20px;
+    animation: carouselInfinite 60s linear infinite;
+}
+  
+.diapos {
+    a {
+      display: block;
+      }
+  
+    img {
+        width: 300px;
+        object-fit: cover;
+  
+        &:hover {
+            cursor: pointer;
+        }
+    }
+   
+}
+  
+  
+@keyframes carouselInfinite {
+   
+    100% {
+        transform: translateX(-100%);
+    }
+}
+  
+.wiggle:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+  
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+  
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+} */
+
+/* Section liste des projets */
+
+.projets_liste {
+
+    article {
+        margin: 30px 20px;
+        border-radius: 20px;
+        border: thin solid lightgrey;
+        padding: 5px;
+
+        p{
+            text-align: justify;
+            font-family: Cascadia code;
+            margin: 10px 0;
+        }
+
+        a{
+            display: flex;
+            justify-content: center;
+            font-family: Cascadia code;
+            text-decoration: none;
+            font-size: 20px;
+        }
+    }
+
+}
+
+/* Section parcours */
+
+.parcours {
+
+    border-top: grey solid ;
+    border-bottom: grey solid ;
+    margin: 30px 0;
+    padding: 10px 0;
+
+    p {
+        text-align: justify;
+        font-family: Cascadia code;
+        margin: 10px 20px;
+    }
+
+}
+
+/* Section compétences */
+
+.competences {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    
+    section{
+
+        h3{
+            margin: 10px 0;
+            text-align: center;
+            font-size: 20px;
+            font-family: Arial;
+        }
+        ul{
+            margin: 10px 0;
+
+            li{
+                margin: 5px 0;
+                font-family: Calibri;
+                font-size: 18px;
+            }
+
+        }
+
+    }
+
+}
+
+/* Section contact */
+
+.contact{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+
+.logo{
+    height: 50px;
+}
+
+/* Pied de page */
+
+footer {
+    height: 100px;
+    background: linear-gradient(to top, var(--bleu-2), var(--bleu-1));
+}
+
+/* Version pour portables et tablettes */
+
+@media only screen and (max-width: 1599px) {
+
+    header {
+    
+        nav{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        
+            a{
+                font-size: 20px;
+            }
+        }   
+    }
+
+    h1 {
+        font-size: 50px;
+    }    
+
+    .projets_diaporama {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .wiggle {
+        
+        img {
+            max-width: 80vw;
+        }
+    }
+
+    .competences {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}

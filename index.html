@@ -1,0 +1,246 @@
+<!-- HTML du Portfolio de Lorenzo Ottaviani -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <title> Portfolio de Lorenzo Ottaviani </title>
+    </head>
+
+    <body>
+
+        <!-- En tête avec barre de navigation interne du portfolio -->
+
+        <header>
+
+            <nav>
+                <a href="#section1"> Projets </a>
+                <a href="#section2"> Parcours </a>
+                <a href="#section3"> Compétences </a>
+                <a href="#section4"> Contact </a>
+            </nav>
+
+        </header>
+
+        <main>
+
+            <!-- Titre du portfolio -->
+
+            <h1> Lorenzo Ottaviani </h1>
+
+            <!-- Présentation générale des projets réalisés sous forme de panneau qui défile -->
+
+            <section id="section1">
+
+                <h2 class="projets_titre"> Projets </h2>
+
+                <section class="projets_diaporama">
+
+                <!-- Lien vers le premier projet : Fansite (HTML + CSS) -->
+
+                <div class="diapos">
+                <a href="#projet1" class="wiggle"> 
+                    <img src="./images/lene-marlin_cover.png" alt="Photo de Lene Marlin">
+                </a>
+                </div>
+
+                <!-- Lien vers le second projet : Configuration PC et virtualisation -->
+
+                <div class="diapos">
+                <a href="#projet2" class="wiggle"> 
+                    <img src="./images/star-trek-tng-enterprise.jpg" alt="Photo du vaisseau spatial Entreprise">
+                </a>
+                </div>
+
+                </section>
+
+            </section>
+
+            <!-- Détail de chaque projet réalisé -->
+
+            <section class="projets_liste">
+
+                <!-- Premier projet : Fansite (HTML + CSS) -->
+
+                <article id="projet1">
+
+                    <h2> Fansite NBO </h2>
+
+                    <p>
+                        On a réalisé en groupe de 3 un site web de fans : le Fansite NBO.
+                        Dans un premier temps on a crée une page d'accueil commune ensemble. 
+                        Puis, chaque membre du groupe à choisi un artiste et a crée seul sa fanpage.
+                    </p>
+
+                    <p>
+                        Languages utilisés : HTML & CSS.
+                    </p>
+
+                    <a href="https://elaf-alnossirat.github.io/fansite-NBO/"> Voir le projet </a>
+
+                </article>
+
+                <!-- Second projet : Configuration PC et virtualisation -->
+
+                <article id="projet2">
+
+                    <h2> Star Trek Virtual Machine </h2>
+
+                    <p>
+                        Avec mes 2 collaborateurs, j'ai répondu à une commande de Starfleet et j'ai conçu 4 configurations PC 
+                        en fonction des attentes et du budjet à disposition de chaque membre de la flotte.
+                        Sur une machine virtuelle, j'ai ensuite installé les OS Windows 11 et Debian (Linux) en dual boot.
+                        J'ai exploré les commandes de base Windows et Linux à partir des terminaux de chacun de ses deux OS.
+                        Enfin, j'ai fait communiquer chacun de mes deux OS et leur hôte, via des ping.
+                    </p>
+
+                    <p>
+                        Outils utilisés : VMware Workstation Pro, Terminal Windows et Terminal Linux sur Debian.
+                    </p>
+
+                    <a href="https://github.com/lorenzo-ottaviani/-Star-Trek-Virtual-Machine/blob/main/Pr%C3%A9sentation%20%E2%80%93%20Config%20et%20virtualisation.pdf"> 
+                        Voir le projet </a>
+
+                </article>
+
+            </section>
+
+            <!-- Présentation de mon parcours professionnel -->
+
+            <section id="section2" class="parcours">
+
+                <h2> Parcours </h2>
+
+                <P>
+                    J'ai étudié les sciences naturelles pendant de nombreuses années jusqu'à obtenir le grade de Master recherche en Ecologie, Biodiversité, Evolution (EBE). 
+                    Après avoir coaché de nombreux collégiens et lycéens en les ayant aidés à reussir leur épreuves de maths, physique-chimie ou SVT ;
+                    j'ai exploré l'enseignement en collège et lycée professionnel deux ans et demi durant.
+                    La découverte de Python au printemps 2024, m'a poussé à m'inscire au Bachelor en informatique à l'école La Plateforme, à Marseille.
+                    Je recherche une alternance en tant que développeur logiciel pour la rentrée 2025.
+                </P>
+
+            </section>
+
+            <!-- Mes compétences -->
+
+            <section id="section3">
+
+                <h2> Compétences </h2>
+
+                <section class="competences">
+
+                    <!-- Compétences techniques en informatique -->
+
+                    <section>
+
+                        <h3> Compétences Techniques</h3>
+
+                        <ul>
+                            <li> HTML et CSS</li>
+                            <li> Python 3 </li>
+                            <li> Git Hub </li>
+                            <li> Git Bash </li>
+                            <li> Terminaux Windows et Debian (Linux) </li>
+                            <li> Figma </li>
+                            <li> Canva</li>
+                            <li> R (Statistiques) </li>
+                        </ul>
+
+                    </section>
+
+                    <!-- Compétences scientifiques -->
+
+                    <section>
+
+                        <h3> Compétences Scientifiques</h3>
+
+                        <ul>
+                            <li> Écologie génerale </li>
+                            <li> Biologie évolutive </li>
+                            <li> Génétique des populations </li>
+                            <li> Statistiques </li>
+                            <li> Botanique et Écologie végétale </li>
+                            <li> Travail de terrain </li>
+                            <li> Conaissances naturalistes </li>
+                        </ul>
+                        
+                    </section>
+
+                    <!-- Compétences d'enseignement -->
+
+                    <section>
+
+                        <h3> Compétences d'Enseignement </h3>
+
+                        <ul>
+                            <li> Donner des cours </li>
+                            <li> Gestion du temps </li>
+                            <li> Pédagogie et didactique </li>
+                            <li> Réalation enseignants, élèves et parents </li>
+                            <li> Hétérogénité des élèves </li>
+                            <li> Lycée : Mathématiques, Physique et Chimie </li>
+                            <li> Lycée professionnel : Biotechnolgies</li>
+                            <li> Classes prépas : SVT </li>
+                        </ul>
+                        
+                    </section>
+
+                    <!-- Autres compétences, transversales : savoir être et langues -->
+
+                    <section>
+
+                        <h3> Compétences Transversales</h3>
+
+                        <ul>
+                            <li> Travailler en groupe </li>
+                            <li> Faire partie d'une équipe </li>
+                            <li> Parler en public </li>
+                            <li> Faire preuve de pédagogie </li>
+                            <li> Être autonome </li>
+                            <li> Rédiger des rapports </li>
+                            <li> Espagnol courant (DELE B2) </li>
+                            <li> Anglais scientifique et technique </li>
+                        </ul>
+                        
+                    </section>
+
+                </section>
+
+            </section>
+
+            <!-- Contact -->
+
+            <section id="section4">
+                
+                <h2> Contact </h2>
+
+                <div class="contact">
+
+                    <!-- Lien vers mon Github -->
+
+                    <a href="https://github.com/lorenzo-ottaviani"> 
+                        <img src="./images/Github.png" alt="Lien vers mon Github" class="logo">
+                    </a>
+
+                    <!-- Lien vers mon LinkedIn -->
+
+                    <a href="https://www.linkedin.com/in/lorenzo-ottaviani-720bab339/">
+                        <img src="./images/LinkedIn.png" alt="Lien vers mon LinkedIn" class="logo">
+                    </a>
+
+                </div>
+                
+            </section>
+
+        </main>
+
+        <footer>
+
+        </footer>
+
+    </body>
+
+</html>
