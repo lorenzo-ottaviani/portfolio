@@ -260,7 +260,7 @@ footer {
 
 /* Version pour portables et tablettes */
 
-@media only screen and (max-width: 1599px) {
+@media only screen and (max-width: 1200px) {
 
     header {
     
