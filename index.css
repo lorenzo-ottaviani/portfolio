@@ -70,100 +70,65 @@ h2 {
     text-align: center;
 }
 
-/* Section diaporama des projets simple */
+/* Section diaporama des projets */
 
 .projets_titre {
     margin: 20px 0;
 }
 
 .projets_diaporama {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    grid-template-areas:
+        "case1 case2 case3 case4"
+        "case5 case6 case7 case8"
+        "case9 case10 case11 case12";
+}
+
+/* Placement explicite de chaque case */
+#case1  { grid-area: case11; }
+#case2  { grid-area: case5; }
+#case3  { grid-area: case12; }
+#case4  { grid-area: case1; }
+#case5  { grid-area: case9; }
+#case6  { grid-area: case6; }
+#case7  { grid-area: case4; }
+#case8  { grid-area: case7; }
+#case9  { grid-area: case2; }
+#case10 { grid-area: case3; }
+#case11 { grid-area: case8; }
+#case12 { grid-area: case10; }
+
+/* Style de chaque case */
+.diapos {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid grey;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
 }
 
 .wiggle {
     display: flex;
-    border-radius: 20px;
-    border: solid grey;
-    padding: 20px;
-    
-    img {
-        height: 400px;
-    }
-
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-/* Section diaporama des projets avec carroussel (pour plus tard) */
-
-/* .projets_diaporama {
-    display: flex;
-    gap: 20px;
-    animation: carouselInfinite 60s linear infinite;
+.wiggle img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
 }
 
-/* .album-carousel {
-    padding: 50px 0;
-    max-width: 1650px;
-    margin: 3em auto;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0px 0px 5px 1px rgba(255, 255, 255, 0.47);
-  }
-  
-/* .album-carousel-items {
-    display: flex;
-    gap: 20px;
-    animation: carouselInfinite 60s linear infinite;
-}
-  
-.diapos {
-    a {
-      display: block;
-      }
-  
-    img {
-        width: 300px;
-        object-fit: cover;
-  
-        &:hover {
-            cursor: pointer;
-        }
-    }
-   
-}
-  
-  
-@keyframes carouselInfinite {
-   
-    100% {
-        transform: translateX(-100%);
-    }
-}
-  
-.wiggle:hover {
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-}
-  
-@keyframes shake {
-    10%, 90% {
-        transform: translate3d(-1px, 0, 0);
-    }
-  
-    20%, 80% {
-        transform: translate3d(2px, 0, 0);
-    }
-  
-    30%, 50%, 70% {
-        transform: translate3d(-4px, 0, 0);
-    }
-  
-    40%, 60% {
-        transform: translate3d(4px, 0, 0);
-    }
-} */
 
 /* Section liste des projets */
 
@@ -261,41 +226,68 @@ footer {
 /* Version pour portables et tablettes */
 
 @media only screen and (max-width: 1200px) {
-
     header {
-    
-        nav{
+        nav {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
-        
-            a{
+
+            a {
                 font-size: 20px;
             }
-        }   
+        }
     }
 
     h1 {
         font-size: 50px;
-    }    
-
-    .projets_diaporama {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    
-    .wiggle {
-        
-        img {
-            max-width: 80vw;
-        }
     }
 
     .competences {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+    }
+}
+
+/* Grille des projets adapté aux tablettes */
+
+@media screen and (max-width: 1599px) {
+    .projets_diaporama {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas:
+            "case1 case2"
+            "case3 case4"
+            "case5 case6"
+            "case7 case8"
+            "case9 case10"
+            "case11 case12";
+    }
+}
+
+/* Grille des projets adapté aux portables */
+
+@media screen and (max-width: 767px) {
+    .projets_diaporama {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, auto);
+        grid-template-areas:
+            "case1"
+            "case2"
+            "case3"
+            "case4"
+            "case5"
+            "case6"
+            "case7"
+            "case8"
+            "case9"
+            "case10"
+            "case11"
+            "case12";
+    }
+
+    .wiggle img {
+        max-width: 80vw;
     }
 }
